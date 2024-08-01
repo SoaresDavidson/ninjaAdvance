@@ -38,3 +38,14 @@ res://scenes/Backgrounds/background_ending.gd
 res://scenes/Menu/ending.gd
 res://scenes/Menu/tiles.gd
 res://scenes/finish.tscn
+res://script/Player/circle.gd
+res://components/keep_direction.gd
+res://scenes/traps/spike.tscn
+res://scenes/traps/spike_donward.tscn
+res://components/move_component.gd
+res://components/KeepLooking.gd
+res://components/Hitbox_component.gd
+res://script/enemys/Sword_enemy.gd
+res://script/enemys/shuriken_projectile.gd
+res://script/enemys/big_bat.gd
+res://components/spawner_component.gd

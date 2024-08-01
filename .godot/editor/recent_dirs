@@ -1,3 +1,5 @@
+res://scenes/Backgrounds
+res://scenes/traps
 res://scenes/Menu
 res://assets/Ninja/Sprite Sheets
 res://scenes
@@ -9,9 +11,7 @@ res://assets/Ninja/Enemys
 res://script/enemys
 res://scenes/enemys
 res://components
-res://scenes/Backgrounds
 res://
 res://script
 res://assets/traps
-res://scenes/traps
 res://script/traps

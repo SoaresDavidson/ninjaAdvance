@@ -20,6 +20,9 @@ func _ready():
 	animated_sprite_2d.modulate = Color(1, 1, 1 , 0)
 	
 func _physics_process(delta):
+	manageGhost(delta)
+	
+func manageGhost(delta : float) -> void:
 	if killed or died: 
 		if died:
 			position.y += 150 * delta 
@@ -40,7 +43,4 @@ func _physics_process(delta):
 		position.x += 200 * delta * ghost_direction 
 		if global_position.x > ninja.global_position.x + 300 or global_position.x < ninja.global_position.x - 300:
 			u = 0
-		
-	
 	animated_sprite_2d.play("default")
-	

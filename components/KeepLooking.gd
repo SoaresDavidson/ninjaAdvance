@@ -6,10 +6,9 @@ extends Node
 @onready var ninja = $"/root/Fase/Ninja"
 
 func _process(delta):
-	if actor.died:
-		return
-	var dist = ninja.global_position.x - actor.global_position.x
-	if dist > 0:
-		animated_sprite.flip_h = false
-	if dist < 0:
-		animated_sprite.flip_h = true
+	if not actor.died:
+		var dist = ninja.global_position.x - actor.global_position.x
+		if dist > 0:
+			animated_sprite.flip_h = false
+		if dist < 0:
+			animated_sprite.flip_h = true

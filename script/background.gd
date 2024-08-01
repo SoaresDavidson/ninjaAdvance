@@ -18,9 +18,9 @@ func _ready():
 		direction = value)
 
 func _process(delta):
-	parallax_layer.motion_offset.x -= 10 * delta
-	parallax_layer_2.motion_offset.x -= 50 * delta * direction
-	parallax_layer_3.motion_offset.x -= 30 * delta * direction
+	parallax_layer.motion_offset.x -= 5 * delta
+	parallax_layer_2.motion_offset.x -= 5 * delta * direction
+	parallax_layer_3.motion_offset.x -= 25 * delta * direction
 	parallax_layer_4.motion_offset.x -= 25 * delta * direction
-	parallax_layer_5.motion_offset.x -= 15 * delta * direction
-	parallax_layer_6.motion_offset.x -= 5 * delta * direction
+	parallax_layer_5.motion_offset.x -= 30 * delta * direction
+	parallax_layer_6.motion_offset.x -= 50 * delta * direction

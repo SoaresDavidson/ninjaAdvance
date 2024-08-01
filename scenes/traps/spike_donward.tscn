@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca1jxi881pp7t"]
+
+[ext_resource type="PackedScene" uid="uid://dpn3rx6maikrl" path="res://scenes/traps/spike.tscn" id="1_mr1fq"]
+
+[node name="spike" instance=ExtResource("1_mr1fq")]
+rotation = 3.14159
+
+[node name="Hitbox" parent="." index="1"]
+visible = false
+monitoring = false
+monitorable = false

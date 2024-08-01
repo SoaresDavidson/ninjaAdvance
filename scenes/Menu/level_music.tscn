@@ -13,7 +13,10 @@
 script = ExtResource("1_2ch7g")
 
 [node name="Menu" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("1_jpfu7")
+autoplay = true
+stream_paused = true
 bus = &"musica"
 
 [node name="Level2" type="AudioStreamPlayer" parent="."]

@@ -41,6 +41,9 @@ sprite_frames = SubResource("SpriteFrames_6g7xq")
 position = Vector2(-0.5, 0.666667)
 shape = SubResource("RectangleShape2D_vaip0")
 
+[node name="Hurtbox" parent="." index="2"]
+monitorable = false
+
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_y5wrp")

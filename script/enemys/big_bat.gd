@@ -8,10 +8,10 @@ func _physics_process(delta):
 	#position.x += -direction * delta * 50
 	u+=3
 	v+=0.75
-	
+	is_dead(delta)
+		
+func is_dead(delta: float):
 	if died or killed:
 		move_and_slide()
 		velocity.y += gravity * delta 
 		return
-		
-	

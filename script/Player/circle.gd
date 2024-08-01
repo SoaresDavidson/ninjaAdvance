@@ -8,4 +8,4 @@ func _process(delta):
 	queue_redraw()
 
 func _draw():
-	draw_arc(Vector2(0,0) , 30, 0, 360, 64, Color(get_parent().cor,get_parent().cor,get_parent().cor), 1.0)
+	draw_arc(Vector2(0,0) , 30, 0, 360, 64, Color(get_parent().cor,get_parent().cor,get_parent().cor,get_parent().cor), 1.0)

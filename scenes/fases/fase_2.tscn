@@ -24,7 +24,7 @@ layer_0/tile_data = PackedInt32Array(1114109, 1, 0, 1114110, 1, 0, 1114111, 1, 0
 
 [node name="Ninja" parent="." instance=ExtResource("3_i6bge")]
 unique_name_in_owner = true
-position = Vector2(18, 22)
+position = Vector2(30, 18)
 
 [node name="Camera2D" type="Camera2D" parent="Ninja"]
 zoom = Vector2(2, 2)

@@ -82,6 +82,10 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_hwuak")
 debug_color = Color(0.987182, 0, 0.315766, 0.42)
 
+[node name="ScreenEnabler" parent="." index="5"]
+position = Vector2(0.999994, 0)
+scale = Vector2(28.8333, 1)
+
 [node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
 node = NodePath("../AnimatedSprite2D")
 

@@ -203,8 +203,6 @@ scale = Vector2(1.5, 1.5)
 [node name="ActionBox" type="CollisionShape2D" parent="ActionSpace"]
 shape = SubResource("CircleShape2D_vtbhm")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ActionSpace"]
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
@@ -222,7 +220,6 @@ script = ExtResource("13_x3ky0")
 node = NodePath("../AnimatedSprite2D")
 
 [node name="Circle" type="Node2D" parent="."]
-visible = false
 script = ExtResource("13_jio8f")
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]

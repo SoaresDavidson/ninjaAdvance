@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://c4o1dx31cncfq"]
+[gd_scene load_steps=43 format=3 uid="uid://c4o1dx31cncfq"]
 
 [ext_resource type="Script" path="res://script/enemys/Green_ninja.gd" id="1_8bc3i"]
 [ext_resource type="Texture2D" uid="uid://dkhsxlglrruau" path="res://assets/Ninja/Enemys/death-Sheet-Green.png" id="2_o7yy2"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://components/move_component.gd" id="9_ht2xq"]
 [ext_resource type="Script" path="res://components/Hitbox_component.gd" id="11_b8kor"]
 [ext_resource type="Script" path="res://components/HurtboxComponnent.gd" id="11_rnjs6"]
+[ext_resource type="Script" path="res://components/direction_component.gd" id="15_kn10c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_besox"]
 
@@ -278,6 +279,14 @@ debug_color = Color(0.960382, 1.92523e-07, 0.516343, 0.42)
 
 [node name="KeepDirection" type="Node" parent="." node_paths=PackedStringArray("actor", "animated_sprite")]
 script = ExtResource("8_5swbh")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="DirectionComponent" type="Node" parent="." node_paths=PackedStringArray("actor", "animated_sprite")]
+script = ExtResource("15_kn10c")
 actor = NodePath("..")
 animated_sprite = NodePath("../AnimatedSprite2D")
 

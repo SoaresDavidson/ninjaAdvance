@@ -25,7 +25,7 @@ var direction: int = 1:
 		direction = value
 		emit_signal("direction_changed",value)
 
-var pressed:float = 0
+
 var speed = 100.0
 const JUMP_VELOCITY = -400.0
 var menu:bool = true
@@ -33,12 +33,20 @@ var walking:bool = true
 var slashing:bool = true
 var died = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var fall_gravity: float = 1500
+
+
+func get_gravity():
+	if velocity.y < 0:
+		return gravity
+	return fall_gravity
 
 func _ready():
 	direction = 0
 	action_space.area_exited.connect(func(area):
-		walking = true
-		cor = 0
+		if not action_space.has_overlapping_areas():
+			walking = true
+			cor = 0
 		)
 	action_space.area_entered.connect(func(area):
 		cor = 255
@@ -49,17 +57,16 @@ func _ready():
 func _physics_process(delta):
 	move_and_slide()
 	velocity.x = speed * direction
-	velocity.y += gravity * delta
-	if died:
-		return
-		
-	if Input.is_action_just_pressed("ui_down"):
-		direction *= -1
-		direction_guard *= -1
-		if direction < 0:
-			animated_sprite.flip_h = true
-		if direction > 0:
-			animated_sprite.flip_h = false
+	velocity.y += get_gravity() * delta
+	
+	if died: return
+	#if Input.is_action_just_pressed("ui_down"):
+		#direction *= -1
+		#direction_guard *= -1
+		#if direction < 0:
+			#animated_sprite.flip_h = true
+		#if direction > 0:
+			#animated_sprite.flip_h = false
 			
 	if slashing:
 		if is_on_floor():
@@ -70,16 +77,14 @@ func _physics_process(delta):
 		else:
 			animated_sprite.play("jump")
 	
-	if Input.is_action_pressed("ação"):
-		pressed += 0.01
-		if pressed >= 0.10:
-			direction = 0
+	#if Input.is_action_pressed("ação"):
+		#pressed += 0.01
+		#if pressed >= 0.15:
+			#direction = 0
 			
-	if Input.is_action_just_released("ação"):
-		direction = direction_guard
-		if pressed >= 0.10 or not walking:
+	if Input.is_action_just_pressed("ação"):
+		if not walking:
 			slash()
-			pressed = 0
 			return
 		if walking and (is_on_floor() or (is_on_wall_only() and velocity.y < 0)):
 			jump_sound.play()
@@ -92,7 +97,9 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			direction = direction_guard
 			animated_sprite.play("jump")
-		pressed = 0
+		#pressed = 0
+	if Input.is_action_just_released("ação") and velocity.y < 0:
+		velocity.y = JUMP_VELOCITY / 4
 		
 func slash():
 	attack_sound.play()

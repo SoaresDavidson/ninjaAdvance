@@ -1,3 +1,5 @@
+Node
+DirectionComponent
 Timer
 Label
 Camera2D
@@ -5,10 +7,8 @@ CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
 CollisionPolygon2D
-Node
 VisibleOnScreenEnabler2D
 KeepDirection
 RiseComponent
-DirectionComponent
 HitboxComponent
 Hitbox

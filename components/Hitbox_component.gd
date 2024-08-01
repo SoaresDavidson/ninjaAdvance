@@ -16,7 +16,6 @@ func _ready():
 		var player = area.get_parent()
 		if not player is Player:
 			return
-			
 		damaged_function = Callable(func(value):
 			if not value and player.global_position.y - global_position.y < 0:
 				player.velocity.y = -400
