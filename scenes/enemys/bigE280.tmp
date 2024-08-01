@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://3w36u5k2qiwe"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_tunrn"]
+[ext_resource type="Texture2D" uid="uid://b25op67re7gqo" path="res://assets/Ninja/blue enemy/bat-orig.png" id="2_44sam"]
+[ext_resource type="Script" path="res://script/enemys/big_bat.gd" id="2_hbumw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tanod"]
+atlas = ExtResource("2_44sam")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6vff"]
+atlas = ExtResource("2_44sam")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fngjs"]
+atlas = ExtResource("2_44sam")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovcgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tanod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6vff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fngjs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4v4s"]
+radius = 16.7199
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dsqyf"]
+radius = 12.6667
+
+[node name="BigBat" instance=ExtResource("1_tunrn")]
+script = ExtResource("2_hbumw")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_ovcgf")
+frame_progress = 0.127589
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_l4v4s")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+shape = SubResource("CircleShape2D_dsqyf")
+debug_color = Color(0.947511, 3.65794e-06, 0.582738, 0.42)
+
+[node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
+node = NodePath("../AnimatedSprite2D")
+
+[node name="FlashComponent" parent="." index="7" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")

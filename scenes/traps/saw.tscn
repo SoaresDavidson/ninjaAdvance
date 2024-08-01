@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://8s33drfu5o10"]
+
+[ext_resource type="PackedScene" uid="uid://ynsu4pvyg8cy" path="res://scenes/traps/traps.tscn" id="1_jll05"]
+[ext_resource type="Texture2D" uid="uid://dpicyuqswf1tj" path="res://assets/traps/On (38x38).png" id="2_oc052"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpbn4"]
+atlas = ExtResource("2_oc052")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fnbt"]
+atlas = ExtResource("2_oc052")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ac3"]
+atlas = ExtResource("2_oc052")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nf4u"]
+atlas = ExtResource("2_oc052")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4qne"]
+atlas = ExtResource("2_oc052")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxkdn"]
+atlas = ExtResource("2_oc052")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eosgk"]
+atlas = ExtResource("2_oc052")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thyol"]
+atlas = ExtResource("2_oc052")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0kner"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpbn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fnbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ac3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nf4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4qne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxkdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eosgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thyol")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c7ogq"]
+radius = 12.7061
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3ofh"]
+radius = 15.0333
+
+[node name="Saw" instance=ExtResource("1_jll05")]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_0kner")
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource("CircleShape2D_c7ogq")
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource("CircleShape2D_j3ofh")
+debug_color = Color(0.851734, 1.56906e-05, 0.57884, 0.42)

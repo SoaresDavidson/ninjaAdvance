@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvyrx7im7s822"]
+
+[ext_resource type="Script" path="res://script/enemys/enemy.gd" id="1_yoxyf"]
+[ext_resource type="Script" path="res://components/Hitbox_component.gd" id="2_gedpw"]
+[ext_resource type="PackedScene" uid="uid://cectowd1vnjr" path="res://scenes/killzone.tscn" id="2_iwetg"]
+[ext_resource type="Script" path="res://components/HurtboxComponnent.gd" id="3_2aakc"]
+[ext_resource type="Script" path="res://components/shake_component.gd" id="4_dwmlo"]
+[ext_resource type="Script" path="res://components/flash_component.gd" id="5_u1iow"]
+[ext_resource type="Script" path="res://components/scale_component.gd" id="6_k1p0p"]
+[ext_resource type="AudioStream" uid="uid://dfkl2wnkyvtx2" path="res://audios/sfxr-2021-01-24-09-15-59.wav" id="7_3p6iu"]
+
+[node name="Enemy" type="CharacterBody2D"]
+z_index = 3
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 2
+floor_block_on_wall = false
+script = ExtResource("1_yoxyf")
+
+[node name="FloorCollision" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="." node_paths=PackedStringArray("actor", "animated_sprite", "collision_shape_hitbox", "collision_shape_hurtbox")]
+script = ExtResource("2_gedpw")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+collision_shape_hitbox = NodePath("CollisionShape2D")
+collision_shape_hurtbox = NodePath("../HurtBox/CollisionShape2D2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("actor", "animated_sprite") instance=ExtResource("2_iwetg")]
+script = ExtResource("3_2aakc")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="ScreenEnabler" type="VisibleOnScreenEnabler2D" parent="."]
+
+[node name="ShakeComponent" type="Node" parent="."]
+script = ExtResource("4_dwmlo")
+
+[node name="FlashComponent" type="Node" parent="."]
+script = ExtResource("5_u1iow")
+
+[node name="ScaleComponent" type="Node" parent="."]
+script = ExtResource("6_k1p0p")
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_3p6iu")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

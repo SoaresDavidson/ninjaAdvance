@@ -1,0 +1,169 @@
+[gd_scene load_steps=23 format=3 uid="uid://cx7a448opmv42"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_7pyia"]
+[ext_resource type="Texture2D" uid="uid://dkhsxlglrruau" path="res://assets/Ninja/Enemys/death-Sheet-Green.png" id="2_13345"]
+[ext_resource type="Texture2D" uid="uid://ba3mdkcjw2ew6" path="res://assets/Ninja/Enemys/idle-Sheet-Green.png" id="3_qo4j8"]
+[ext_resource type="Texture2D" uid="uid://rkhl3pjns5b7" path="res://assets/Ninja/Enemys/slash-Sheet-Green.png" id="4_mbe0k"]
+[ext_resource type="Script" path="res://components/move_component.gd" id="5_4fss0"]
+[ext_resource type="Script" path="res://components/keep_direction.gd" id="7_in8dc"]
+
+[sub_resource type="GDScript" id="GDScript_yenls"]
+script/source = "extends Enemy
+@onready var move_component = $MoveComponent
+var seen:bool = false
+
+func _process(delta):
+	if ninja.global_position.y >= global_position.y and not seen:
+		seen = true
+		animated_sprite_2d.play(\"ready\")
+		await animated_sprite_2d.animation_finished
+		animated_sprite_2d.play(\"slash\")
+		move_component.velocity.x = 350
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4fyp"]
+size = Vector2(20, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7430o"]
+atlas = ExtResource("2_13345")
+region = Rect2(0, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2jku"]
+atlas = ExtResource("2_13345")
+region = Rect2(35, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pi67"]
+atlas = ExtResource("2_13345")
+region = Rect2(70, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0wca"]
+atlas = ExtResource("2_13345")
+region = Rect2(105, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkqwd"]
+atlas = ExtResource("3_qo4j8")
+region = Rect2(0, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlwmc"]
+atlas = ExtResource("3_qo4j8")
+region = Rect2(32, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgmwr"]
+atlas = ExtResource("3_qo4j8")
+region = Rect2(64, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdupy"]
+atlas = ExtResource("3_qo4j8")
+region = Rect2(96, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7256"]
+atlas = ExtResource("4_mbe0k")
+region = Rect2(84, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b85u8"]
+atlas = ExtResource("4_mbe0k")
+region = Rect2(0, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ledb"]
+atlas = ExtResource("4_mbe0k")
+region = Rect2(42, 0, 42, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1ijw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7430o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2jku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pi67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0wca")
+}],
+"loop": false,
+"name": &"death",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkqwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlwmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgmwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdupy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7256")
+}],
+"loop": false,
+"name": &"ready",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b85u8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ledb")
+}],
+"loop": false,
+"name": &"slash",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8uhnk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c211h"]
+radius = 7.36357
+
+[node name="Thruster" instance=ExtResource("1_7pyia")]
+script = SubResource("GDScript_yenls")
+
+[node name="FloorCollision" parent="." index="0"]
+position = Vector2(1.33333, 13.3333)
+shape = SubResource("RectangleShape2D_m4fyp")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_u1ijw")
+animation = &"slash"
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 3.33333)
+shape = SubResource("CircleShape2D_8uhnk")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+position = Vector2(0, 3.33333)
+shape = SubResource("CircleShape2D_c211h")
+debug_color = Color(0.955664, 0, 0.542022, 0.42)
+
+[node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
+node = NodePath("../AnimatedSprite2D")
+
+[node name="FlashComponent" parent="." index="7" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="KeepDirection" type="Node" parent="." index="10" node_paths=PackedStringArray("actor", "animated_sprite")]
+script = ExtResource("7_in8dc")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="MoveComponent" type="Node" parent="." index="11" node_paths=PackedStringArray("actor")]
+script = ExtResource("5_4fss0")
+actor = NodePath("..")

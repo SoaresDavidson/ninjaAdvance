@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://q8c15ui325kq"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemy.tscn" id="1_vr4o5"]
+[ext_resource type="Script" path="res://script/shuriken_projectile.gd" id="2_6aqwh"]
+[ext_resource type="Texture2D" uid="uid://bwjse6v1xyun7" path="res://assets/Ninja/shuriken enemy/Shuriken.png" id="2_qit3e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk031"]
+atlas = ExtResource("2_qit3e")
+region = Rect2(0, 0, 110, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k07m"]
+atlas = ExtResource("2_qit3e")
+region = Rect2(0, 0, 110, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfmqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk031")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k07m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ouece"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwuak"]
+
+[node name="ShurikenProjectile" instance=ExtResource("1_vr4o5")]
+script = ExtResource("2_6aqwh")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(-0.999999, -5)
+scale = Vector2(0.1, 0.061)
+sprite_frames = SubResource("SpriteFrames_qfmqg")
+frame_progress = 0.775085
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_ouece")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_hwuak")
+debug_color = Color(0.987182, 0, 0.315766, 0.42)

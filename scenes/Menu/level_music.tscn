@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bamwi4b48aqun"]
+
+[ext_resource type="Script" path="res://script/level_music.gd" id="1_2ch7g"]
+[ext_resource type="AudioStream" uid="uid://b8chn54ue5vn8" path="res://audios/xDeviruchi - Title Theme .wav" id="1_jpfu7"]
+[ext_resource type="AudioStream" uid="uid://1i8g0ngsvqu0" path="res://audios/xDeviruchi - And The Journey Begins .wav" id="2_hqn15"]
+[ext_resource type="AudioStream" uid="uid://lpur1dlolvid" path="res://audios/xDeviruchi - Decisive Battle.wav" id="3_3bq0a"]
+[ext_resource type="AudioStream" uid="uid://boccb6t0n6yd3" path="res://audios/xDeviruchi - Exploring The Unknown.wav" id="4_sx8u6"]
+[ext_resource type="AudioStream" uid="uid://brvgy8huptxxa" path="res://audios/xDeviruchi - Minigame .wav" id="5_h82nt"]
+[ext_resource type="AudioStream" uid="uid://kt32ngpcymce" path="res://audios/xDeviruchi - Mysterious Dungeon.wav" id="6_ecw4j"]
+[ext_resource type="AudioStream" uid="uid://cumocpotrulu0" path="res://audios/xDeviruchi - The Final of The Fantasy.wav" id="8_bsden"]
+
+[node name="LevelMusic" type="Node2D"]
+script = ExtResource("1_2ch7g")
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jpfu7")
+bus = &"musica"
+
+[node name="Level2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hqn15")
+bus = &"musica"
+
+[node name="Level3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3bq0a")
+bus = &"musica"
+
+[node name="Level4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sx8u6")
+bus = &"musica"
+
+[node name="Level5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_h82nt")
+bus = &"musica"
+
+[node name="Level6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ecw4j")
+bus = &"musica"
+
+[node name="Level7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_bsden")
+bus = &"musica"

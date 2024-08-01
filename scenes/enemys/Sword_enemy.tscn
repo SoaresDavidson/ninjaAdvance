@@ -1,0 +1,221 @@
+[gd_scene load_steps=33 format=3 uid="uid://ctek85qpijo40"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_6gk83"]
+[ext_resource type="Script" path="res://script/enemys/Sword_enemy.gd" id="2_h62d4"]
+[ext_resource type="Texture2D" uid="uid://c8sffuehfaktj" path="res://assets/Ninja/Enemys/2.png" id="3_wm5ee"]
+[ext_resource type="Texture2D" uid="uid://bcwgm1h5d8077" path="res://assets/Ninja/Enemys/idle-Sheet.png" id="4_2pr04"]
+[ext_resource type="Texture2D" uid="uid://dttkn7jfjpt5i" path="res://assets/Ninja/Enemys/SNES - Ninja Gaiden Trilogy - Ryu Ninja Gaiden 3.png" id="5_smvww"]
+[ext_resource type="Texture2D" uid="uid://dtf500rp70ong" path="res://assets/Ninja/Enemys/run-Sheet.png" id="6_8mi2w"]
+[ext_resource type="Texture2D" uid="uid://c6n3oeaqjilcn" path="res://assets/Ninja/Enemys/slash-Sheet.png" id="7_j6m8u"]
+[ext_resource type="Script" path="res://components/direction_component.gd" id="8_gf1ut"]
+[ext_resource type="Script" path="res://components/move_component.gd" id="9_gqf1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so7td"]
+size = Vector2(18.6667, 5.36442e-07)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yctrt"]
+atlas = ExtResource("3_wm5ee")
+region = Rect2(0, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kdd7"]
+atlas = ExtResource("3_wm5ee")
+region = Rect2(35, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8ga6"]
+atlas = ExtResource("3_wm5ee")
+region = Rect2(70, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otgeq"]
+atlas = ExtResource("3_wm5ee")
+region = Rect2(105, 0, 35, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6wd4"]
+atlas = ExtResource("4_2pr04")
+region = Rect2(0, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvcfd"]
+atlas = ExtResource("4_2pr04")
+region = Rect2(32, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btcx2"]
+atlas = ExtResource("4_2pr04")
+region = Rect2(64, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y4ve"]
+atlas = ExtResource("4_2pr04")
+region = Rect2(96, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v3be"]
+atlas = ExtResource("5_smvww")
+region = Rect2(9, 12, 26, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7404"]
+atlas = ExtResource("5_smvww")
+region = Rect2(35, 12, 26, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osahj"]
+atlas = ExtResource("5_smvww")
+region = Rect2(61, 12, 26, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xo8v"]
+atlas = ExtResource("5_smvww")
+region = Rect2(87, 12, 26, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l41xe"]
+atlas = ExtResource("6_8mi2w")
+region = Rect2(0, 0, 36, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yixg"]
+atlas = ExtResource("6_8mi2w")
+region = Rect2(36, 0, 36, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3kju"]
+atlas = ExtResource("6_8mi2w")
+region = Rect2(72, 0, 36, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gygkk"]
+atlas = ExtResource("7_j6m8u")
+region = Rect2(0, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqmr2"]
+atlas = ExtResource("7_j6m8u")
+region = Rect2(42, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33je3"]
+atlas = ExtResource("7_j6m8u")
+region = Rect2(84, 0, 42, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a42xi"]
+atlas = ExtResource("7_j6m8u")
+region = Rect2(126, 0, 42, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dq300"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yctrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kdd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8ga6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otgeq")
+}],
+"loop": false,
+"name": &"death",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6wd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvcfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btcx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y4ve")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v3be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7404")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osahj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xo8v")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l41xe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yixg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3kju")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gygkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqmr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33je3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a42xi")
+}],
+"loop": false,
+"name": &"slash",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8k1cl"]
+radius = 11.3333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lpl3m"]
+radius = 9.33333
+
+[node name="SwordEnemy" instance=ExtResource("1_6gk83")]
+script = ExtResource("2_h62d4")
+speed = 125.0
+
+[node name="FloorCollision" parent="." index="0"]
+position = Vector2(0.666667, 13.3333)
+shape = SubResource("RectangleShape2D_so7td")
+debug_color = Color(0, 0.634665, 0.42638, 0.42)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_dq300")
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 2.66667)
+shape = SubResource("CircleShape2D_8k1cl")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+position = Vector2(0, 2.66667)
+shape = SubResource("CircleShape2D_lpl3m")
+debug_color = Color(0.994897, 0, 0.214532, 0.42)
+
+[node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
+node = NodePath("../AnimatedSprite2D")
+
+[node name="FlashComponent" parent="." index="7" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="DirectionComponent" type="Node" parent="." index="10" node_paths=PackedStringArray("actor", "animated_sprite")]
+script = ExtResource("8_gf1ut")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="MoveComponent" type="Node" parent="." index="11" node_paths=PackedStringArray("actor")]
+script = ExtResource("9_gqf1l")
+actor = NodePath("..")

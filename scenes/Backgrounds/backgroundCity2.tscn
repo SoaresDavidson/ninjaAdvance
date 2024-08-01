@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://muhobulmdvcl"]
+
+[ext_resource type="PackedScene" uid="uid://ttuwwdgks3r5" path="res://scenes/Backgrounds/background.tscn" id="1_0lc67"]
+[ext_resource type="Texture2D" uid="uid://jra81h0rnnng" path="res://assets/city/city 2/1.png" id="2_lx6at"]
+[ext_resource type="Texture2D" uid="uid://ca5s88hmaqokv" path="res://assets/city/city 2/2.png" id="3_i3c5n"]
+[ext_resource type="Texture2D" uid="uid://cre3armunqj71" path="res://assets/city/city 2/3.png" id="4_wrkh3"]
+[ext_resource type="Texture2D" uid="uid://dc0biuumxkhaa" path="res://assets/city/city 2/4.png" id="5_6oas6"]
+[ext_resource type="Texture2D" uid="uid://djhw41y3a2ase" path="res://assets/city/city 2/5.png" id="6_vwd0y"]
+[ext_resource type="Texture2D" uid="uid://chhhclv6as33k" path="res://assets/city/city 2/6.png" id="7_i0lr2"]
+
+[node name="background" instance=ExtResource("1_0lc67")]
+
+[node name="TextureRect" parent="ParallaxLayer" index="0"]
+texture = ExtResource("2_lx6at")
+
+[node name="TextureRect" parent="ParallaxLayer2" index="0"]
+texture = ExtResource("3_i3c5n")
+
+[node name="CloseBuildings" parent="ParallaxLayer3" index="0"]
+texture = ExtResource("4_wrkh3")
+
+[node name="TextureRect" parent="ParallaxLayer4" index="0"]
+texture = ExtResource("5_6oas6")
+
+[node name="TextureRect" parent="ParallaxLayer5" index="0"]
+texture = ExtResource("6_vwd0y")
+
+[node name="ParallaxLayer6" parent="." index="5"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="TextureRect" parent="ParallaxLayer6" index="0"]
+texture = ExtResource("7_i0lr2")

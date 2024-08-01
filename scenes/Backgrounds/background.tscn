@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://ttuwwdgks3r5"]
+
+[ext_resource type="Script" path="res://script/background.gd" id="1_r518q"]
+
+[node name="background" type="ParallaxBackground"]
+script = ExtResource("1_r518q")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(576, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(576, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(576, 0)
+
+[node name="CloseBuildings" type="TextureRect" parent="ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(576, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer4"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(576, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer5"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer6"]
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk5bhvh1735hn"]
+
+[ext_resource type="Script" path="res://components/rise_component.gd" id="1_i1ecv"]
+
+[node name="Rise" type="VisibleOnScreenEnabler2D"]
+position = Vector2(0, -121)
+scale = Vector2(1, 13.6)
+script = ExtResource("1_i1ecv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.35
+
+[connection signal="screen_entered" from="." to="." method="_on_screen_entered"]

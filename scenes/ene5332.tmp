@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2itucrllb0x"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemy.tscn" id="1_62esx"]
+[ext_resource type="Texture2D" uid="uid://c01n37l7kb56u" path="res://assets/Ninja/Sprite Sheets/run-Sheet.png" id="2_8jxlu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s6d5"]
+atlas = ExtResource("2_8jxlu")
+region = Rect2(0, 0, 36, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbin2"]
+atlas = ExtResource("2_8jxlu")
+region = Rect2(36, 0, 36, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs8w3"]
+atlas = ExtResource("2_8jxlu")
+region = Rect2(72, 0, 36, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xx5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s6d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbin2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs8w3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nl3hu"]
+size = Vector2(12.8, 20)
+
+[node name="Enemy_test" instance=ExtResource("1_62esx")]
+scale = Vector2(2.3, 2.3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_7xx5h")
+autoplay = "default"
+
+[node name="MoveComponent" parent="." index="1"]
+velocity = Vector2(10, 0)
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(3.2, 3.6)
+shape = SubResource("RectangleShape2D_nl3hu")

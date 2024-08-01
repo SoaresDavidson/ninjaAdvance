@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://q8c15ui325kq"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_fn71j"]
+[ext_resource type="Script" path="res://script/enemys/shuriken_projectile.gd" id="2_ojxt6"]
+[ext_resource type="Script" path="res://components/direction_component.gd" id="4_1kdwr"]
+[ext_resource type="Texture2D" uid="uid://cjhl53tt7xbd" path="res://assets/Ninja/Enemys/shuriken pixel art.png" id="4_u4ujr"]
+[ext_resource type="Script" path="res://components/move_component.gd" id="5_skcix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq0lh"]
+atlas = ExtResource("4_u4ujr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h0ib"]
+atlas = ExtResource("4_u4ujr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq252"]
+atlas = ExtResource("4_u4ujr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iykl"]
+atlas = ExtResource("4_u4ujr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfmqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq0lh")
+}],
+"loop": false,
+"name": &"death",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h0ib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq252")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iykl")
+}],
+"loop": false,
+"name": &"slash",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ouece"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwuak"]
+radius = 5.34374
+
+[node name="ShurikenProjectile" instance=ExtResource("1_fn71j")]
+script = ExtResource("2_ojxt6")
+speed = 150.0
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -5.33333)
+sprite_frames = SubResource("SpriteFrames_qfmqg")
+animation = &"death"
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_ouece")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_hwuak")
+debug_color = Color(0.987182, 0, 0.315766, 0.42)
+
+[node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
+node = NodePath("../AnimatedSprite2D")
+
+[node name="FlashComponent" parent="." index="7" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+flash_duration = 0.5
+
+[node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+scale_amount = Vector2(0.1, 0.1)
+
+[node name="DirectionComponent" type="Node" parent="." index="9" node_paths=PackedStringArray("actor", "animated_sprite")]
+script = ExtResource("4_1kdwr")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="MoveComponent" type="Node" parent="." index="10" node_paths=PackedStringArray("actor")]
+script = ExtResource("5_skcix")
+actor = NodePath("..")

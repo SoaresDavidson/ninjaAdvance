@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://doi60gx01hekr"]
+
+[ext_resource type="Script" path="res://script/ninja.gd" id="1_a7ypu"]
+[ext_resource type="Texture2D" uid="uid://ckvy1sdnmpp0n" path="res://assets/Ninja/Sprite Sheets/idle-Sheet.png" id="1_hvg3e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0krrm"]
+atlas = ExtResource("1_hvg3e")
+region = Rect2(0, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j4ow"]
+atlas = ExtResource("1_hvg3e")
+region = Rect2(32, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjvvq"]
+atlas = ExtResource("1_hvg3e")
+region = Rect2(64, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtdrl"]
+atlas = ExtResource("1_hvg3e")
+region = Rect2(96, 0, 32, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0nwlj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0krrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j4ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjvvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtdrl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xq1tp"]
+size = Vector2(12, 19)
+
+[node name="Ninja" type="CharacterBody2D"]
+script = ExtResource("1_a7ypu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0nwlj")
+autoplay = "default"
+frame_progress = 0.155391
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_xq1tp")

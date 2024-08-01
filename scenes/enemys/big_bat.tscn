@@ -1,0 +1,141 @@
+[gd_scene load_steps=19 format=3 uid="uid://3w36u5k2qiwe"]
+
+[ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_tunrn"]
+[ext_resource type="Texture2D" uid="uid://b25op67re7gqo" path="res://assets/Ninja/Enemys/bat-orig.png" id="2_44sam"]
+[ext_resource type="Script" path="res://script/enemys/big_bat.gd" id="2_hbumw"]
+[ext_resource type="Script" path="res://components/keep_direction.gd" id="4_rhdi2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oihtb"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgg0c"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uscpx"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfrfq"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tanod"]
+atlas = ExtResource("2_44sam")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6vff"]
+atlas = ExtResource("2_44sam")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fngjs"]
+atlas = ExtResource("2_44sam")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nkw0"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4p2w"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llseh"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyxue"]
+atlas = ExtResource("2_44sam")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovcgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oihtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgg0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uscpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfrfq")
+}],
+"loop": false,
+"name": &"death",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tanod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6vff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fngjs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nkw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4p2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llseh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyxue")
+}],
+"loop": false,
+"name": &"slash",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4v4s"]
+radius = 20.7096
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dsqyf"]
+radius = 12.6667
+
+[node name="BigBat" instance=ExtResource("1_tunrn")]
+script = ExtResource("2_hbumw")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_ovcgf")
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_l4v4s")
+
+[node name="CollisionShape2D2" parent="HurtBox" index="2"]
+shape = SubResource("CircleShape2D_dsqyf")
+debug_color = Color(0.947511, 3.65794e-06, 0.582738, 0.42)
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="4"]
+scale = Vector2(27, 1)
+
+[node name="ScreenEnabler" parent="." index="5"]
+scale = Vector2(26.9333, 1)
+
+[node name="ShakeComponent" parent="." index="6" node_paths=PackedStringArray("node")]
+node = NodePath("../AnimatedSprite2D")
+
+[node name="FlashComponent" parent="." index="7" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="KeepDirection" type="Node" parent="." index="9" node_paths=PackedStringArray("actor", "animated_sprite")]
+script = ExtResource("4_rhdi2")
+actor = NodePath("..")
+animated_sprite = NodePath("../AnimatedSprite2D")

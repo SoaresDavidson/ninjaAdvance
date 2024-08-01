@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvyrx7im7s822"]
+
+[ext_resource type="Script" path="res://script/enemy.gd" id="1_hlg4u"]
+[ext_resource type="Script" path="res://components/move_component.gd" id="1_qhjsn"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_hlg4u")
+
+[node name="MoveComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("1_qhjsn")
+actor = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,170 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722422240
+default_bus_layout.tres::AudioBusLayout::1769058562546149875::1722102097::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1722422240::0::1::::<><>::
+globalVars.gd::GDScript::-1::1722381693::0::1::::<>Node<>::
+kenney_mini_square.ttf::FontFile::8770819380762888763::1719755724::1722105711::1::::<><>::
+Labiras_Logo.png::CompressedTexture2D::1491076806506500888::1722077922::1722077934::1::::<><>::
+::res://assets/::1722389500
+Tiles.png::CompressedTexture2D::118825767946442248::1722389401::1722389434::1::::<><>::
+Tileset.png::CompressedTexture2D::6239495800980034034::1722389500::1722389500::1::::<><>::
+::res://assets/city/::1722387521
+::res://assets/city/city 1/::1722382846
+1.png::CompressedTexture2D::7620212186026992539::1721329609::1721329819::1::::<><>::
+2.png::CompressedTexture2D::220079281402373784::1721329609::1721329819::1::::<><>::
+3.png::CompressedTexture2D::259238147847838578::1721329609::1721329819::1::::<><>::
+4.png::CompressedTexture2D::5085073115602517696::1721329609::1721329819::1::::<><>::
+5.png::CompressedTexture2D::5294125240698082377::1721329609::1721329819::1::::<><>::
+::res://assets/city/city 2/::1722382919
+1.png::CompressedTexture2D::666854323340033612::1721329610::1721329824::1::::<><>::
+2.png::CompressedTexture2D::4835926281706709473::1721329610::1721329824::1::::<><>::
+3.png::CompressedTexture2D::5976010208407779406::1721329610::1721329824::1::::<><>::
+4.png::CompressedTexture2D::7351325267490321116::1721329610::1721329824::1::::<><>::
+5.png::CompressedTexture2D::7806801253919780672::1721329610::1721329824::1::::<><>::
+6.png::CompressedTexture2D::5279043119275005538::1721329610::1721329824::1::::<><>::
+::res://assets/city/city 3/::1722382911
+1.png::CompressedTexture2D::8734362991532842077::1721329610::1721329824::1::::<><>::
+2.png::CompressedTexture2D::3758273200468228971::1721329610::1721329824::1::::<><>::
+3.png::CompressedTexture2D::9090205427781595805::1721329610::1721329824::1::::<><>::
+4.png::CompressedTexture2D::1014565626756832281::1721329610::1721329824::1::::<><>::
+5.png::CompressedTexture2D::6921419110038654195::1721329610::1721329824::1::::<><>::
+::res://assets/city/city 4/::1722382903
+1.png::CompressedTexture2D::636453526139589548::1721329610::1721329824::1::::<><>::
+2.png::CompressedTexture2D::8988304782444209185::1721329610::1721329824::1::::<><>::
+3.png::CompressedTexture2D::5252633089037587415::1721329610::1721329824::1::::<><>::
+4.png::CompressedTexture2D::4090122030036294936::1721329610::1721329824::1::::<><>::
+5.png::CompressedTexture2D::7223123632774292060::1721329610::1721329824::1::::<><>::
+7.png::CompressedTexture2D::862327830689546296::1721329610::1721329824::1::::<><>::
+::res://assets/city/city 6/::1722382887
+1.png::CompressedTexture2D::9205687003674799033::1721329608::1721329824::1::::<><>::
+2.png::CompressedTexture2D::8812190348187277520::1721329608::1721329824::1::::<><>::
+3.png::CompressedTexture2D::7586773430713165381::1721329608::1721329824::1::::<><>::
+4.png::CompressedTexture2D::1886008945930782661::1721329608::1721329824::1::::<><>::
+5.png::CompressedTexture2D::7433615922654471506::1721329608::1721329824::1::::<><>::
+6.png::CompressedTexture2D::6916972485698032238::1721329608::1721329824::1::::<><>::
+::res://assets/city/city 7/::1722382875
+1.png::CompressedTexture2D::1533648175386995729::1721329609::1721329824::1::::<><>::
+2.png::CompressedTexture2D::1311207303592593827::1721329609::1721329824::1::::<><>::
+3.png::CompressedTexture2D::7493565616600351002::1721329609::1721329824::1::::<><>::
+4.png::CompressedTexture2D::5859084274562618789::1721329609::1721329824::1::::<><>::
+5.png::CompressedTexture2D::7905394178865196506::1721329609::1721329824::1::::<><>::
+::res://assets/Ninja/::1722253097
+::res://assets/Ninja/Enemys/::1722458485
+2.png::CompressedTexture2D::7126545577918665959::1721691445::1722253098::1::::<><>::
+bat-orig.png::CompressedTexture2D::4344329297785681190::1721752221::1722253098::1::::<><>::
+death-Sheet-Green.png::CompressedTexture2D::7876735698416531164::1722216171::1722253107::1::::<><>::
+gosth.png::CompressedTexture2D::8846203104880273211::1722125579::1722253098::1::::<><>::
+idle-Sheet-Green.png::CompressedTexture2D::2444957750864182131::1722215555::1722253107::1::::<><>::
+idle-Sheet.png::CompressedTexture2D::2572601790831071868::1721589480::1722253098::1::::<><>::
+jump_animation_green.png::CompressedTexture2D::1430959038226490896::1722294709::1722294712::1::::<><>::
+run-Sheet.png::CompressedTexture2D::8505039463673555680::1721691421::1722253098::1::::<><>::
+run_sheet_green.png::CompressedTexture2D::3885348310926974017::1722295125::1722295127::1::::<><>::
+shuriken pixel art.png::CompressedTexture2D::159403369589897617::1722458546::1722458595::1::::<><>::
+slash-Sheet-Green.png::CompressedTexture2D::1214300276322371066::1722215421::1722253107::1::::<><>::
+slash-Sheet.png::CompressedTexture2D::6977257718712834253::1721649454::1722253098::1::::<><>::
+SNES - Ninja Gaiden Trilogy - Ryu Ninja Gaiden 3.png::CompressedTexture2D::8532705337667743544::1721700934::1722253098::1::::<><>::
+throw-Sheet.png::CompressedTexture2D::1721474579356328435::1721597582::1722253098::1::::<><>::
+::res://assets/Ninja/Sprite Sheets/::1722382967
+death-Sheet.png::CompressedTexture2D::8052753298245505734::1498176562::1721329886::1::::<><>::
+hurt-Sheet.png::CompressedTexture2D::5284145812308816300::1498176380::1721329886::1::::<><>::
+idle-Sheet.png::CompressedTexture2D::5519586325731723827::1721589684::1721589749::1::::<><>::
+jump_animation1.png::CompressedTexture2D::1675854312157908407::1722294970::1722294974::1::::<><>::
+long jump&fall anim-Sheet.png::CompressedTexture2D::8183029559966522334::1498176547::1721329886::1::::<><>::
+quick jump&fall anim-Sheet.png::CompressedTexture2D::2744916271737570428::1498176422::1721329886::1::::<><>::
+run-Sheet.png::CompressedTexture2D::6582077302285292178::1498176510::1721329886::1::::<><>::
+slash-Sheet-running.png::CompressedTexture2D::8661511252479062054::1722367278::1722367282::1::::<><>::
+slash-Sheet.png::CompressedTexture2D::6454374605428908020::1498176467::1721329886::1::::<><>::
+sneaky walk-Sheet.png::CompressedTexture2D::8300411374323941734::1498176303::1721329886::1::::<><>::
+throw-Sheet.png::CompressedTexture2D::6518518474312520382::1721593597::1721593664::1::::<><>::
+::res://assets/traps/::1721739807
+Idle.png::CompressedTexture2D::8071798238576327677::1721739774::1721739807::1::::<><>::
+Off.png::CompressedTexture2D::1245966580090892126::1721739798::1721739807::1::::<><>::
+On (38x38).png::CompressedTexture2D::8228775096752855359::1721739794::1721739807::1::::<><>::
+::res://audios/::1722387601
+attack variation.wav::AudioStreamWAV::3632826451916383443::1722078980::1722078980::1::::<><>::
+menu select.wav::AudioStreamWAV::3759224662447485527::1722078980::1722078980::1::::<><>::
+sfxr-2021-01-24-09-15-59.wav::AudioStreamWAV::7531567326249361181::1722078980::1722078980::1::::<><>::
+sfxr-2021-02-01-16-37-17.wav::AudioStreamWAV::7648909012220879594::1722078980::1722078980::1::::<><>::
+Victory.wav::AudioStreamWAV::3773131858045012118::1722078964::1722078964::1::::<><>::
+xDeviruchi - And The Journey Begins .wav::AudioStreamWAV::1843440665609765065::1722370207::1722101414::1::::<><>::
+xDeviruchi - Decisive Battle.wav::AudioStreamWAV::804289015441437631::1722370207::1722101414::1::::<><>::
+xDeviruchi - Exploring The Unknown.wav::AudioStreamWAV::3373318128642754442::1722370208::1722101415::1::::<><>::
+xDeviruchi - Minigame .wav::AudioStreamWAV::3623391864398936498::1722370208::1722101488::1::::<><>::
+xDeviruchi - Mysterious Dungeon.wav::AudioStreamWAV::742860598697892408::1722370208::1722101489::1::::<><>::
+xDeviruchi - Prepare for Battle! .wav::AudioStreamWAV::2222372158653896712::1722370205::1722101491::1::::<><>::
+xDeviruchi - The Final of The Fantasy.wav::AudioStreamWAV::6202245193046411645::1722370205::1722101490::1::::<><>::
+xDeviruchi - The Icy Cave .wav::AudioStreamWAV::2249992336839952059::1722370206::1722101488::1::::<><>::
+xDeviruchi - Title Theme .wav::AudioStreamWAV::4707231134941508255::1722370206::1722101415::1::::<><>::
+::res://components/::1722458486
+direction_component.gd::GDScript::-1::1722125702::0::1::::DirectionComponent<>Node<>::
+flash_component.gd::GDScript::-1::1721738238::0::1::::FlashComponent<>Node<>::
+Hitbox_component.gd::GDScript::-1::1722178376::0::1::::HitboxComponent<>Area2D<>::
+HurtboxComponnent.gd::GDScript::-1::1722179120::0::1::::HurtboxComponent<>Area2D<>::
+KeepLooking.gd::GDScript::-1::1722298304::0::1::::KeepLooking<>Node<>::
+keep_direction.gd::GDScript::-1::1722302249::0::1::::KeepDirection<>Node<>::
+killzone.gd::GDScript::-1::1722253193::0::1::::<>Node2D<>::
+move_component.gd::GDScript::-1::1722300027::0::1::::MoveComponent<>Node<>::
+rise_component.gd::GDScript::-1::1722458486::0::1::::RiseComponent<>VisibleOnScreenEnabler2D<>::
+scale_component.gd::GDScript::-1::1721743951::0::1::::ScaleComponent<>Node<>::
+shake_component.gd::GDScript::-1::1721743951::0::1::::ShakeComponent<>Node<>::
+spawner_component.gd::GDScript::-1::1721609854::0::1::::SpawnerComponent<>Node2D<>::
+::res://effects/::1722458488
+explosion_effect.tscn::PackedScene::6582622698593351029::1721738100::0::1::::<><>::uid://du6stessavyl5::::res://assets/explosion.png<>res://components/onetime_animated_effect.gd<>uid://qskk4yhh4neo::::res://sounds/explosion_sound.wav
+white_flash_material.gdshader::Shader::-1::1722458488::0::1::::<><>::
+white_flash_material.tres::ShaderMaterial::210536038483746541::1721738100::0::1::::<><>::res://effects/white_flash_material.gdshader
+::res://scenes/::1722458488
+finish.tscn::PackedScene::1261928541684431029::1722253040::0::1::::<><>::res://script/Player/finish.gd<>uid://bt0y6vubglxvy::::res://audios/Victory.wav
+killzone.tscn::PackedScene::148791331846520735::1721509900::0::1::::<><>::res://components/killzone.gd
+menu.tscn::PackedScene::7212598691980334875::1722175916::0::1::::<><>::res://script/menu.gd<>uid://dh744o587gs::::res://scenes/tiles.tscn<>res://scenes/Menu/NinjaMenu.gd<>uid://ckvy1sdnmpp0n::::res://assets/Ninja/Sprite Sheets/idle-Sheet.png<>uid://c01n37l7kb56u::::res://assets/Ninja/Sprite Sheets/run-Sheet.png<>uid://bts847nj1vgax::::res://audios/menu select.wav<>uid://muhobulmdvcl::::res://scenes/Backgrounds/backgroundCity2.tscn<>uid://dw7wd4rs3hu08::::res://kenney_mini_square.ttf
+ninja.tscn::PackedScene::8160348107509130413::1722458487::0::1::::<><>::uid://ckvy1sdnmpp0n::::res://assets/Ninja/Sprite Sheets/idle-Sheet.png<>res://script/Player/ninja.gd<>uid://dmy2w14qgjf3s::::res://assets/Ninja/Sprite Sheets/death-Sheet.png<>uid://c01n37l7kb56u::::res://assets/Ninja/Sprite Sheets/run-Sheet.png<>uid://x42ctqmm4bh4::::res://assets/Ninja/Sprite Sheets/jump_animation1.png<>uid://dvnx3bsry1i2a::::res://assets/Ninja/Sprite Sheets/slash-Sheet-running.png<>res://components/scale_component.gd<>res://components/flash_component.gd<>res://script/Player/circle.gd<>res://components/shake_component.gd<>uid://br01ed04wm1rj::::res://audios/attack variation.wav<>uid://dfkl2wnkyvtx2::::res://audios/sfxr-2021-01-24-09-15-59.wav<>uid://dg8gocqnc6q8q::::res://audios/sfxr-2021-02-01-16-37-17.wav
+tiles.tscn::PackedScene::6676866270503750::1722458488::0::1::::<><>::uid://cu5pt4m8qdwc5::::res://assets/Tileset.png<>uid://bxtbp0spiguy::::res://assets/Tiles.png
+::res://scenes/Backgrounds/::1722296067
+background.tscn::PackedScene::1374065994205820800::1722106581::0::1::::<><>::res://script/background.gd
+backgroundCity2.tscn::PackedScene::884003782737024347::1722106581::0::1::::<><>::uid://ttuwwdgks3r5::::res://scenes/Backgrounds/background.tscn<>uid://jra81h0rnnng::::res://assets/city/city 2/1.png<>uid://ca5s88hmaqokv::::res://assets/city/city 2/2.png<>uid://cre3armunqj71::::res://assets/city/city 2/3.png<>uid://dc0biuumxkhaa::::res://assets/city/city 2/4.png<>uid://djhw41y3a2ase::::res://assets/city/city 2/5.png<>uid://chhhclv6as33k::::res://assets/city/city 2/6.png
+backgroundCity4.tscn::PackedScene::4496413888354105636::1722296067::0::1::::<><>::uid://ttuwwdgks3r5::::res://scenes/Backgrounds/background.tscn<>uid://jckkc4d5ba2o::::res://assets/city/city 4/1.png<>uid://d1caci7bkugmr::::res://assets/city/city 4/2.png<>uid://cg3odnc82l0ch::::res://assets/city/city 4/3.png<>uid://byjjyhmxg3wiq::::res://assets/city/city 4/4.png<>uid://da5615klfwui3::::res://assets/city/city 4/5.png<>uid://mjyob4vvrclc::::res://assets/city/city 4/7.png
+background_city_1.tscn::PackedScene::1032483372467047461::1722005635::0::1::::<><>::uid://ttuwwdgks3r5::::res://scenes/Backgrounds/background.tscn<>uid://dgtj1tjiefn68::::res://assets/city/city 1/1.png<>uid://deuw5xuikcd1::::res://assets/city/city 1/2.png<>uid://dxtu5jfob6x7::::res://assets/city/city 1/3.png<>uid://cepin8o1ionoa::::res://assets/city/city 1/4.png<>uid://chorp7oy3wmx2::::res://assets/city/city 1/5.png
+background_city_3.tscn::PackedScene::5490108964136013006::1722101808::0::1::::<><>::uid://ttuwwdgks3r5::::res://scenes/Backgrounds/background.tscn<>uid://dwo8xg2v1epll::::res://assets/city/city 3/1.png<>uid://btsshfmk7t8l0::::res://assets/city/city 3/2.png<>uid://d2rmmcyyc57pp::::res://assets/city/city 3/3.png<>uid://opp0ojl8ipsj::::res://assets/city/city 3/4.png<>uid://c5u105knxudjf::::res://assets/city/city 3/5.png
+::res://scenes/enemys/::1722458488
+big_bat.tscn::PackedScene::2012460465164944128::1722253097::0::1::::<><>::uid://cvyrx7im7s822::::res://scenes/enemys/enemy.tscn<>uid://b25op67re7gqo::::res://assets/Ninja/Enemys/bat-orig.png<>res://script/enemys/big_bat.gd<>res://components/keep_direction.gd
+enemy.tscn::PackedScene::6297427105713533637::1722458487::0::1::::<><>::res://script/enemys/enemy.gd<>res://components/Hitbox_component.gd<>uid://cectowd1vnjr::::res://scenes/killzone.tscn<>res://components/HurtboxComponnent.gd<>res://components/shake_component.gd<>res://components/flash_component.gd<>res://components/scale_component.gd<>uid://dfkl2wnkyvtx2::::res://audios/sfxr-2021-01-24-09-15-59.wav
+ghost.tscn::PackedScene::4785292492564538857::1722422024::0::1::::<><>::uid://dybfw4vpdurah::::res://assets/Ninja/Enemys/gosth.png<>res://script/enemys/ghost.gd<>res://components/HurtboxComponnent.gd<>res://components/Hitbox_component.gd<>res://components/shake_component.gd<>res://components/scale_component.gd<>res://components/flash_component.gd<>res://components/keep_direction.gd<>res://script/enemys/GhostVisibleOnScreenEnabler.gd
+Green_ninja.tscn::PackedScene::6838804373115704970::1722458488::0::1::::<><>::res://script/enemys/Green_ninja.gd<>uid://dkhsxlglrruau::::res://assets/Ninja/Enemys/death-Sheet-Green.png<>uid://ba3mdkcjw2ew6::::res://assets/Ninja/Enemys/idle-Sheet-Green.png<>uid://unfxlmdgpcnw::::res://assets/Ninja/Enemys/jump_animation_green.png<>res://components/shake_component.gd<>uid://rkhl3pjns5b7::::res://assets/Ninja/Enemys/slash-Sheet-Green.png<>res://components/flash_component.gd<>res://components/scale_component.gd<>uid://bvmdebuexqki0::::res://assets/Ninja/Enemys/run_sheet_green.png<>uid://dfkl2wnkyvtx2::::res://audios/sfxr-2021-01-24-09-15-59.wav<>res://components/keep_direction.gd<>res://components/move_component.gd<>res://components/Hitbox_component.gd<>res://components/HurtboxComponnent.gd
+thruster.tscn::PackedScene::6453298222026439577::1722458488::0::1::::<><>::uid://cvyrx7im7s822::::res://scenes/enemys/enemy.tscn<>uid://dkhsxlglrruau::::res://assets/Ninja/Enemys/death-Sheet-Green.png<>uid://ba3mdkcjw2ew6::::res://assets/Ninja/Enemys/idle-Sheet-Green.png<>uid://rkhl3pjns5b7::::res://assets/Ninja/Enemys/slash-Sheet-Green.png<>res://components/move_component.gd<>res://components/keep_direction.gd
+rise_on_spawn.tscn::PackedScene::7923156152660724179::1722369717::0::1::::<><>::res://components/rise_component.gd
+shuriken_enemy.tscn::PackedScene::5584303798613723030::1722388366::0::1::::<><>::uid://cvyrx7im7s822::::res://scenes/enemys/enemy.tscn<>res://script/enemys/shuriken.gd<>uid://c8sffuehfaktj::::res://assets/Ninja/Enemys/2.png<>uid://bcwgm1h5d8077::::res://assets/Ninja/Enemys/idle-Sheet.png<>res://components/spawner_component.gd<>uid://q8c15ui325kq::::res://scenes/enemys/shuriken_projectile.tscn<>uid://dttkn7jfjpt5i::::res://assets/Ninja/Enemys/SNES - Ninja Gaiden Trilogy - Ryu Ninja Gaiden 3.png<>uid://c6n3oeaqjilcn::::res://assets/Ninja/Enemys/slash-Sheet.png<>uid://yr5o1v3facgp::::res://assets/Ninja/Enemys/throw-Sheet.png<>res://components/keep_direction.gd<>res://components/move_component.gd
+shuriken_projectile.tscn::PackedScene::1191315435718140660::1722458488::0::1::::<><>::uid://cvyrx7im7s822::::res://scenes/enemys/enemy.tscn<>res://script/enemys/shuriken_projectile.gd<>res://components/direction_component.gd<>uid://cjhl53tt7xbd::::res://assets/Ninja/Enemys/shuriken pixel art.png<>res://components/move_component.gd
+Sword_enemy.tscn::PackedScene::6115354609761550675::1722458487::0::1::::<><>::uid://cvyrx7im7s822::::res://scenes/enemys/enemy.tscn<>res://script/enemys/Sword_enemy.gd<>uid://c8sffuehfaktj::::res://assets/Ninja/Enemys/2.png<>uid://bcwgm1h5d8077::::res://assets/Ninja/Enemys/idle-Sheet.png<>uid://dttkn7jfjpt5i::::res://assets/Ninja/Enemys/SNES - Ninja Gaiden Trilogy - Ryu Ninja Gaiden 3.png<>uid://dtf500rp70ong::::res://assets/Ninja/Enemys/run-Sheet.png<>uid://c6n3oeaqjilcn::::res://assets/Ninja/Enemys/slash-Sheet.png<>res://components/direction_component.gd<>res://components/move_component.gd
+::res://scenes/fases/::1722458487
+fase_0.tscn::PackedScene::5558326856847960854::1722458487::0::1::::<><>::uid://doi60gx01hekr::::res://scenes/ninja.tscn<>uid://dh744o587gs::::res://scenes/tiles.tscn<>uid://cectowd1vnjr::::res://scenes/killzone.tscn<>uid://muhobulmdvcl::::res://scenes/Backgrounds/backgroundCity2.tscn<>uid://r8j1qgqgb0sf::::res://scenes/finish.tscn<>uid://ctek85qpijo40::::res://scenes/enemys/Sword_enemy.tscn<>uid://dk5bhvh1735hn::::res://scenes/enemys/rise_on_spawn.tscn<>uid://cltcwx30clr63::::res://scenes/enemys/shuriken_enemy.tscn<>uid://3w36u5k2qiwe::::res://scenes/enemys/big_bat.tscn
+fase_1.tscn::PackedScene::2960554705546879893::1722458487::0::1::::<><>::uid://dh744o587gs::::res://scenes/tiles.tscn<>uid://doi60gx01hekr::::res://scenes/ninja.tscn<>uid://cectowd1vnjr::::res://scenes/killzone.tscn<>uid://r8j1qgqgb0sf::::res://scenes/finish.tscn<>uid://ckhpj7fm3ohb7::::res://scenes/Backgrounds/background_city_3.tscn<>uid://dpn3rx6maikrl::::res://scenes/traps/spike.tscn<>uid://3w36u5k2qiwe::::res://scenes/enemys/big_bat.tscn<>uid://ctek85qpijo40::::res://scenes/enemys/Sword_enemy.tscn<>uid://dk5bhvh1735hn::::res://scenes/enemys/rise_on_spawn.tscn<>uid://cltcwx30clr63::::res://scenes/enemys/shuriken_enemy.tscn<>uid://cagbck4a5mjf2::::res://scenes/enemys/ghost.tscn<>uid://c4o1dx31cncfq::::res://scenes/enemys/Green_ninja.tscn
+fase_2.tscn::PackedScene::1752942675277160534::1722458487::0::1::::<><>::uid://oye357ciyfib::::res://scenes/Backgrounds/background_city_1.tscn<>uid://dh744o587gs::::res://scenes/tiles.tscn<>uid://doi60gx01hekr::::res://scenes/ninja.tscn<>uid://cectowd1vnjr::::res://scenes/killzone.tscn<>uid://dk5bhvh1735hn::::res://scenes/enemys/rise_on_spawn.tscn<>uid://cltcwx30clr63::::res://scenes/enemys/shuriken_enemy.tscn<>uid://r8j1qgqgb0sf::::res://scenes/finish.tscn<>uid://dpn3rx6maikrl::::res://scenes/traps/spike.tscn<>uid://ctek85qpijo40::::res://scenes/enemys/Sword_enemy.tscn<>uid://cagbck4a5mjf2::::res://scenes/enemys/ghost.tscn<>uid://3w36u5k2qiwe::::res://scenes/enemys/big_bat.tscn
+fase_3.tscn::PackedScene::8958826442512190336::1722458487::0::1::::<><>::uid://doi60gx01hekr::::res://scenes/ninja.tscn<>uid://dh744o587gs::::res://scenes/tiles.tscn<>uid://cectowd1vnjr::::res://scenes/killzone.tscn<>uid://b5cdjrpsbhb7y::::res://scenes/Backgrounds/backgroundCity4.tscn<>uid://c4o1dx31cncfq::::res://scenes/enemys/Green_ninja.tscn<>uid://dk5bhvh1735hn::::res://scenes/enemys/rise_on_spawn.tscn<>uid://8s33drfu5o10::::res://scenes/traps/saw.tscn<>uid://cagbck4a5mjf2::::res://scenes/enemys/ghost.tscn<>uid://3w36u5k2qiwe::::res://scenes/enemys/big_bat.tscn<>uid://ctek85qpijo40::::res://scenes/enemys/Sword_enemy.tscn<>uid://cltcwx30clr63::::res://scenes/enemys/shuriken_enemy.tscn
+::res://scenes/Menu/::1722388366
+backgroundCity2.gd::GDScript::-1::1722103218::0::1::::<>ParallaxBackground<>::
+level_music.tscn::PackedScene::2412544803017623909::1722388366::0::1::::<><>::res://script/level_music.gd<>uid://b8chn54ue5vn8::::res://audios/xDeviruchi - Title Theme .wav<>uid://1i8g0ngsvqu0::::res://audios/xDeviruchi - And The Journey Begins .wav<>uid://lpur1dlolvid::::res://audios/xDeviruchi - Decisive Battle.wav<>uid://boccb6t0n6yd3::::res://audios/xDeviruchi - Exploring The Unknown.wav<>uid://brvgy8huptxxa::::res://audios/xDeviruchi - Minigame .wav<>uid://kt32ngpcymce::::res://audios/xDeviruchi - Mysterious Dungeon.wav<>uid://6wse6lwr4s7i::::res://audios/xDeviruchi - Prepare for Battle! .wav
+NinjaMenu.gd::GDScript::-1::1722102513::0::1::::<>CharacterBody2D<>::
+::res://scenes/traps/::1722422024
+saw.tscn::PackedScene::2355140901741768277::1722252151::0::1::::<><>::uid://ynsu4pvyg8cy::::res://scenes/traps/traps.tscn<>uid://dpicyuqswf1tj::::res://assets/traps/On (38x38).png
+spike.tscn::PackedScene::8240663307217952117::1721751931::0::1::::<><>::uid://ynsu4pvyg8cy::::res://scenes/traps/traps.tscn<>uid://dnablqmmpjdq0::::res://assets/traps/Idle.png
+traps.tscn::PackedScene::1712499327199159024::1722422024::0::1::::<><>::res://script/traps/Hitbox.gd<>res://script/traps/Hurtbox.gd
+::res://script/::1722370324
+background.gd::GDScript::-1::1722092757::0::1::::<>ParallaxBackground<>::
+level_music.gd::GDScript::-1::1722370324::0::1::::<>Node2D<>::
+menu.gd::GDScript::-1::1722121699::0::1::::<>Node2D<>::
+::res://script/enemys/::1722424971
+big_bat.gd::GDScript::-1::1722087328::0::1::::<>Enemy<>::
+enemy.gd::GDScript::-1::1722357611::0::1::::Enemy<>CharacterBody2D<>::
+ghost.gd::GDScript::-1::1722363691::0::1::::<>Node2D<>::
+GhostVisibleOnScreenEnabler.gd::GDScript::-1::1722363931::0::1::::<>VisibleOnScreenEnabler2D<>::
+Green_ninja.gd::GDScript::-1::1722424971::0::1::::<>Enemy<>::
+shuriken.gd::GDScript::-1::1722185415::0::1::::<>Enemy<>::
+shuriken_projectile.gd::GDScript::-1::1721930853::0::1::::<>Enemy<>::
+Sword_enemy.gd::GDScript::-1::1722178007::0::1::::<>Enemy<>::
+::res://script/Player/::1722381694
+circle.gd::GDScript::-1::1721942786::0::1::::<>Node2D<>::
+finish.gd::GDScript::-1::1722356913::0::1::::<>Node2D<>::
+ninja.gd::GDScript::-1::1722381693::0::1::::Player<>CharacterBody2D<>::
+::res://script/traps/::1722125152
+Hitbox.gd::GDScript::-1::1722125152::0::1::::Hitbox<>Area2D<>::
+Hurtbox.gd::GDScript::-1::1721742893::0::1::::<>Area2D<>::
+spike.gd::GDScript::-1::1721742746::0::1::::<>Node2D<>::

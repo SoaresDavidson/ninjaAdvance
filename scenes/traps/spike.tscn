@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpn3rx6maikrl"]
+
+[ext_resource type="PackedScene" uid="uid://ynsu4pvyg8cy" path="res://scenes/traps/traps.tscn" id="1_6kpb5"]
+[ext_resource type="Texture2D" uid="uid://dnablqmmpjdq0" path="res://assets/traps/Idle.png" id="2_qfufn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35tof"]
+atlas = ExtResource("2_qfufn")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54dg0"]
+atlas = ExtResource("2_qfufn")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6g7xq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35tof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54dg0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaip0"]
+size = Vector2(7.33333, 7.11111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5wrp"]
+size = Vector2(7, 7)
+
+[node name="spike" instance=ExtResource("1_6kpb5")]
+scale = Vector2(3, 3)
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_6g7xq")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(-0.5, 0.666667)
+shape = SubResource("RectangleShape2D_vaip0")
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_y5wrp")
+debug_color = Color(0.957832, 4.81307e-07, 0.530442, 0.42)
