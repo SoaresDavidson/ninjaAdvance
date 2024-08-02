@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://3w36u5k2qiwe"]
+[gd_scene load_steps=18 format=3 uid="uid://3w36u5k2qiwe"]
 
 [ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_tunrn"]
 [ext_resource type="Texture2D" uid="uid://b25op67re7gqo" path="res://assets/Ninja/Enemys/bat-orig.png" id="2_44sam"]
 [ext_resource type="Script" path="res://script/enemys/big_bat.gd" id="2_hbumw"]
-[ext_resource type="Script" path="res://components/keep_direction.gd" id="4_rhdi2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oihtb"]
 atlas = ExtResource("2_44sam")
@@ -134,8 +133,3 @@ sprite = NodePath("../AnimatedSprite2D")
 
 [node name="ScaleComponent" parent="." index="8" node_paths=PackedStringArray("sprite")]
 sprite = NodePath("../AnimatedSprite2D")
-
-[node name="KeepDirection" type="Node" parent="." index="9" node_paths=PackedStringArray("actor", "animated_sprite")]
-script = ExtResource("4_rhdi2")
-actor = NodePath("..")
-animated_sprite = NodePath("../AnimatedSprite2D")

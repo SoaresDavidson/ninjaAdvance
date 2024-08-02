@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://q8c15ui325kq"]
+[gd_scene load_steps=12 format=3 uid="uid://q8c15ui325kq"]
 
 [ext_resource type="PackedScene" uid="uid://cvyrx7im7s822" path="res://scenes/enemys/enemy.tscn" id="1_fn71j"]
 [ext_resource type="Script" path="res://script/enemys/shuriken_projectile.gd" id="2_ojxt6"]
-[ext_resource type="Script" path="res://components/direction_component.gd" id="4_1kdwr"]
 [ext_resource type="Texture2D" uid="uid://cjhl53tt7xbd" path="res://assets/Ninja/Enemys/shuriken pixel art.png" id="4_u4ujr"]
 [ext_resource type="Script" path="res://components/move_component.gd" id="5_skcix"]
 
@@ -61,11 +60,11 @@ animations = [{
 radius = 8.06226
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hwuak"]
-radius = 5.34374
+radius = 3.34996
 
 [node name="ShurikenProjectile" instance=ExtResource("1_fn71j")]
 script = ExtResource("2_ojxt6")
-speed = 150.0
+speed = 125.0
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 position = Vector2(0, -5.33333)
@@ -97,11 +96,6 @@ flash_duration = 0.5
 sprite = NodePath("../AnimatedSprite2D")
 scale_amount = Vector2(0.1, 0.1)
 
-[node name="DirectionComponent" type="Node" parent="." index="9" node_paths=PackedStringArray("actor", "animated_sprite")]
-script = ExtResource("4_1kdwr")
-actor = NodePath("..")
-animated_sprite = NodePath("../AnimatedSprite2D")
-
-[node name="MoveComponent" type="Node" parent="." index="10" node_paths=PackedStringArray("actor")]
+[node name="MoveComponent" type="Node" parent="." index="9" node_paths=PackedStringArray("actor")]
 script = ExtResource("5_skcix")
 actor = NodePath("..")

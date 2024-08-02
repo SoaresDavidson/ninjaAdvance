@@ -33,7 +33,7 @@ var walking:bool = true
 var slashing:bool = true
 var died = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var fall_gravity: float = 1500
+var fall_gravity: float = 1250
 
 
 func get_gravity():

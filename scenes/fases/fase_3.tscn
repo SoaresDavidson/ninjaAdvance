@@ -63,11 +63,11 @@ position = Vector2(3990, 262)
 
 [node name="thruster" parent="GreenNinja" instance=ExtResource("5_v8qhn")]
 process_mode = 3
-position = Vector2(722, 339)
+position = Vector2(729, 337)
 
 [node name="Rise" parent="GreenNinja/thruster" node_paths=PackedStringArray("enemy") instance=ExtResource("6_q70y3")]
-position = Vector2(290, -77.3333)
-scale = Vector2(1, 13.6)
+position = Vector2(287.667, -77.3333)
+scale = Vector2(1.23333, 13.6)
 enable_mode = 1
 enemy = NodePath("..")
 wait_time = 0.35
@@ -147,3 +147,12 @@ position = Vector2(2064, 26)
 
 [node name="Shuriken_enemy2" parent="." instance=ExtResource("11_yakix")]
 position = Vector2(1631, 125)
+
+[node name="BigBat2" parent="." instance=ExtResource("9_ur3ju")]
+position = Vector2(3431, 106)
+
+[node name="BigBat3" parent="." instance=ExtResource("9_ur3ju")]
+position = Vector2(2065, 64)
+
+[node name="SwordEnemy2" parent="." instance=ExtResource("10_mmls1")]
+position = Vector2(3801, 126)

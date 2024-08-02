@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn8mh28qk8p2q"]
+[gd_scene load_steps=12 format=3 uid="uid://dn8mh28qk8p2q"]
 
 [ext_resource type="PackedScene" uid="uid://doi60gx01hekr" path="res://scenes/ninja.tscn" id="1_ag2rp"]
 [ext_resource type="PackedScene" uid="uid://dh744o587gs" path="res://scenes/tiles.tscn" id="2_l5sat"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://r8j1qgqgb0sf" path="res://scenes/finish.tscn" id="5_riyfa"]
 [ext_resource type="PackedScene" uid="uid://8s33drfu5o10" path="res://scenes/traps/saw.tscn" id="6_nket5"]
 [ext_resource type="PackedScene" uid="uid://dp3rj4dy1h8ys" path="res://scenes/Backgrounds/backgroundCity6.tscn" id="7_7a5en"]
+[ext_resource type="PackedScene" uid="uid://3w36u5k2qiwe" path="res://scenes/enemys/big_bat.tscn" id="8_3h2jf"]
+[ext_resource type="PackedScene" uid="uid://ctek85qpijo40" path="res://scenes/enemys/Sword_enemy.tscn" id="9_bkakm"]
+[ext_resource type="PackedScene" uid="uid://dk5bhvh1735hn" path="res://scenes/enemys/rise_on_spawn.tscn" id="10_2ut38"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ttj1"]
 distance = -434.0
@@ -14,7 +17,7 @@ distance = -434.0
 [node name="Fase" type="Node2D"]
 
 [node name="Ninja" parent="." instance=ExtResource("1_ag2rp")]
-position = Vector2(46, 220)
+position = Vector2(1271, 112)
 
 [node name="Camera2D" type="Camera2D" parent="Ninja"]
 zoom = Vector2(2, 2)
@@ -55,3 +58,17 @@ z_index = -1
 position = Vector2(434, 267)
 
 [node name="background" parent="." instance=ExtResource("7_7a5en")]
+
+[node name="BigBat" parent="." instance=ExtResource("8_3h2jf")]
+position = Vector2(279, 160)
+
+[node name="BigBat2" parent="." instance=ExtResource("8_3h2jf")]
+position = Vector2(1539, 109)
+
+[node name="SwordEnemy" parent="." instance=ExtResource("9_bkakm")]
+position = Vector2(1751, 324)
+
+[node name="Rise" parent="SwordEnemy" node_paths=PackedStringArray("enemy") instance=ExtResource("10_2ut38")]
+position = Vector2(81.3334, -41.3333)
+enemy = NodePath("..")
+wait_time = 0.5

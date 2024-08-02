@@ -1,8 +1,8 @@
 extends Enemy
+class_name GreenNinja
 @onready var move_component = $MoveComponent
 @onready var keep_direction = $KeepDirection
 @onready var timer = $Timer
-
 
 var seen:bool = false
 
@@ -20,7 +20,6 @@ func manageSprites() -> void:
 	if not is_on_floor() and not seen:
 		animated_sprite_2d.play("jump")
 		return
-	
 	if not seen:
 		animated_sprite_2d.play("running")
 	if (ninja.global_position.y >= global_position.y or abs(ninja.global_position.x - global_position.x) < 320) and not seen:

@@ -21,7 +21,7 @@ distance = -353.0
 
 [node name="Ninja" parent="." instance=ExtResource("2_h1rsj")]
 unique_name_in_owner = true
-position = Vector2(1568, 267)
+position = Vector2(22, 19)
 
 [node name="Camera2D" type="Camera2D" parent="Ninja"]
 position = Vector2(2, 2)
